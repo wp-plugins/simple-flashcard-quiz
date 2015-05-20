@@ -35,6 +35,7 @@ Activate the plugin through the 'Plugins' menu in WordPress
 
 == Screenshots ==
 
+
 == Changelog ==
 
 = 1.1 =
