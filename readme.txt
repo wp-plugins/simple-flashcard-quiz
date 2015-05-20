@@ -16,16 +16,16 @@ Simple Flashcards lets you create a simple quiz with questions and awnsers by us
 Usage:
 Your Quiz hast to be positioned inside a following shorcode [flashcard] ... [/flashcard]. Questions and awnsers a simply separated by the following tag: [==].
 
-Example:
-[flashcard title="Your Quiz"]
-A sample question
-[==]
-A sample awnser
-[==]
-Another question
-[==]
-Another awnser
-[/flashcard]
+Example:  
+[flashcard title="Your Quiz"]  
+A sample question  
+[==]  
+A sample awnser  
+[==]  
+Another question  
+[==]  
+Another awnser  
+[/flashcard]    
 
 That's all. You can add images or anything else wherever you want. Try it out!
 
