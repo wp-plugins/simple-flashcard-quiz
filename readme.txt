@@ -34,6 +34,7 @@ Upload the simple-flashcards directory to your plugins directory ('.../wp-conten
 Activate the plugin through the 'Plugins' menu in WordPress
 
 == Screenshots ==
+1. Integrate Quizzes on any post/page by using shortcode
 
 
 == Changelog ==
