@@ -1,0 +1,64 @@
+.flashcard_main {
+	padding:0;
+	margin:0;
+	text-align:right;
+	display:none;
+	padding-bottom:3em;
+}
+
+/* HEADER and FOOTER*/
+.flashcard_header, .flashcard_footer{
+	background:#f2f1f0;
+	color:#cccbca;
+	margin:0;
+	font-size:0.8em;
+	padding:0px 1em 0px 1em;
+	text-align:right;
+	display:inline;
+}
+
+.flashcard_header {vertical-align:bottom;}
+.flashcard_footer {vertical-align:top;}
+
+/* CONTENT */
+.flashcard_content {
+	font-size:120%;
+	padding:0.5em 1em 0.5em 1em;
+	border:8px solid #cccbca;
+	text-align:left;
+	min-height:300px;
+	overflow:hidden;
+	overflow-x:auto;
+}
+
+.flashcard_content img {max-height:90%;}
+
+.flashcard_content ul, li, ol li {margin-left:1em;}
+
+.flashcard_content p{
+	padding-bottom:0;
+	margin-bottom:0;
+}
+
+/* BUTTONS */
+.flashcard_btn_correct{
+	display:none;
+	background:#89e82d;
+}
+
+.flashcard_btn_wrong{
+	display:none;
+	background:#fa7373;
+}
+
+.flashcard_buttons {
+	padding-top:10px;
+	text-align:right;
+	vertical-align:top;
+}
+
+.flashcard_start, .flashcard_finish{
+	border:1px solid #ddd;
+	padding:0 0 1em 1em;
+	margin-bottom:2em;
+}
