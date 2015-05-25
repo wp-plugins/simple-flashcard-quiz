@@ -3,7 +3,7 @@ Contributors: Gero Gothe
 Tags: quiz, flashcards
 Requires at least: 4.2.1
 Tested up to: 4.2
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPL2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ Usage:
 Your Quiz hast to be positioned inside a following shorcode [flashcard] ... [/flashcard]. Questions and awnsers a simply separated by the following tag: [==].
 
 Example:  
-[flashcard title="Your Quiz"]  
+[flashcard title="Your Quiz" draft=yes]  
 A sample question  
 [==]  
 A sample awnser  
@@ -27,7 +27,11 @@ Another question
 Another awnser  
 [/flashcard]    
 
-That's all. You can add images or anything else wherever you want. Try it out!
+That's all. You can add images or anything else wherever you want. Try it out!    
+
+Options:  
+* title=Your title
+* draft=yes -> Topic is not yet completed (shows a small message)
 
 == Installation ==
 Upload the simple-flashcards directory to your plugins directory ('.../wp-content/plugins').
@@ -41,6 +45,11 @@ Activate the plugin through the 'Plugins' menu in WordPress
 
 
 == Changelog ==
+
+= 1.2 =
+* Changes in stylesheet
+* Added draft=yes (case sensitive) option
+* Scrolling to top of flashcard improved
 
 = 1.1 =
 Multiple Instances of Flashcards on a page/post implemented

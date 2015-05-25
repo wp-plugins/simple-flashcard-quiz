@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Simple Flashcard Quiz
  * Description: Shortcode integration of simple flashcards
- * Version: 1.1
+ * Version: 1.2
  * Author: Gero Gothe
  * License: GPL2
  */
@@ -46,8 +46,9 @@ function simple_flashcard_build($atts,$content=null){
 		<?php for ($c=0;$c<count($list);$c++) echo "sets[instance].cards[$c] = '".str_replace(array("\r", "\n"), "",$list[$c])."';\n"; ?>
 	</script>
 	 
-	<div id="fc_start">
+	<div id="fc_start" class="flashcard_start">
 		<h3><?php echo (isset($atts['title'])? $atts['title']:'Flashcards');?></h3>
+		<?php if (isset($atts['draft']) && $atts["draft"]=="yes") echo "<span style='color:red'>This topic is still in work / not completed yet.</span>";?>
 		<p>This quiz contains <?php echo (count($list)/2); ?> question(s).</p>
 		<input id="fc_start_btn" type="button" value="Start the quiz!">
 	</div>
@@ -63,11 +64,12 @@ function simple_flashcard_build($atts,$content=null){
 		</div>
 	</div>
 	
-	<div id="fc_finish" style="display:none">
-		<h3 id="fc_message"></h3>
+	<div id="fc_finish" class="flashcard_finish" style="display:none">
+		<h3><?php echo (isset($atts['title'])? $atts['title']:'Flashcards');?></h3>
+		<p id="fc_message"></p>
 		<div id="fc_repeat">
-			<div>Do you want to repeat the question you didn't awsner correctly?</div>	
-			<div class="flashcard_buttons">
+			<p>Do you want to repeat the question you didn't awsner correctly?</p>
+			<div>
 				<input id="fc_repeat_btn" type="button" value="Yes">
 			</div>
 		</div>

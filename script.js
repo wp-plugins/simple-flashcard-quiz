@@ -36,17 +36,22 @@ function flashcards(id,title) {
 		if (this.current>this.amount-1) {
 			this.current=-1;
 			$("fc_main"+this.id).style.display="none";
-			$("fc_finish"+this.id).style.display="inline";
+			$("fc_finish"+this.id).style.display="block";
 		
-			$("fc_message"+this.id).innerHTML = "<u>"+this.title+"</u>: You awnsered "+((this.amount/2 == this.correct.length)? "all":this.correct.length+" out of "+(this.amount/2)+" ("+Math.round((this.correct.length/(this.amount/2))*100)+"%)")+" question(s) correctly.";
+			$("fc_message"+this.id).innerHTML = "You awnsered "+((this.amount/2 == this.correct.length)? "all":this.correct.length+" out of "+(this.amount/2)+" ("+Math.round((this.correct.length/(this.amount/2))*100)+"%)")+" question(s) correctly.";
 			if (this.amount/2 == this.correct.length) $("fc_repeat"+this.id).style.display="none";
 		}
 	
 		// update information which ist displayed
 		this.fc_setButtons();	
 		$("fc_content"+this.id).innerHTML = this.cards[this.current];
-		$("fc_footer"+this.id).innerHTML = "Frage "+Math.round((this.current+1)/2)+"/"+Math.floor(this.amount/2);
-		window.scrollTo(0, $("fc_main"+this.id).offsetTop); 
+		$("fc_footer"+this.id).innerHTML = "Question "+Math.round((this.current+1)/2)+"/"+Math.floor(this.amount/2);
+		
+		// Scroll to top of flashcard
+		var bodyRect = document.body.getBoundingClientRect(),
+			elemRect = $("fc_main"+this.id).getBoundingClientRect(),
+			offset   = elemRect.top - bodyRect.top;
+		window.scrollTo(0, offset);
 	}
 
 	// continue learning a deck
