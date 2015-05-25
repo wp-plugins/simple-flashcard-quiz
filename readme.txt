@@ -30,7 +30,7 @@ Another awnser
 That's all. You can add images or anything else wherever you want. Try it out!    
 
 Options:  
-* title=Your title
+* title=Your title  
 * draft=yes -> Topic is not yet completed (shows a small message)
 
 == Installation ==
